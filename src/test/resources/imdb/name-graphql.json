@@ -1,0 +1,12 @@
+{
+  "nameText": { "text": "Morgan Freeman" },
+  "primaryImage": { "url": "https://m.media-amazon.com/images/M/morgan.jpg" },
+  "primaryProfessions": [
+    { "category": { "text": "Actor" } },
+    { "category": { "text": "Producer" } },
+    { "category": { "text": "Director" } }
+  ],
+  "bio": { "text": { "plainText": "Ator conhecido pela voz marcante e pela carreira longeva." } },
+  "birthDate": { "date": "1937-06-01" },
+  "deathDate": { "date": null }
+}

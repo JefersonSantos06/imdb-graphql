@@ -1,0 +1,80 @@
+= imdb-graphql — API IMDB
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+API de wrapper/crawler do IMDB. Dado um código, retorna os dados de um filme, de
+uma pessoa ou o calendário de estreias. As respostas são cacheadas por (tipo,
+código, locale) com TTL configurável.
+
+== Autenticação
+
+Todos os endpoints (exceto `/actuator/health` e esta documentação) exigem
+autenticação *HTTP Basic*. Envie o cabeçalho `Authorization: Basic <credenciais>`
+em cada requisição. Sem credenciais válidas a API responde `401 Unauthorized`.
+
+== Convenções
+
+* `locale` (query, opcional): idioma/região dos campos localizados. Default: `pt-BR`.
+* `ttl` (query, opcional): validade do cache em segundos; `0` força um novo scrape.
+* Códigos: filme = `ttNNNNNNN`, pessoa = `nmNNNNNNN`. Formato inválido retorna `400`;
+  código inexistente retorna `404`.
+
+== Filme
+
+`GET /api/imdb/{codigo}` — retorna os dados completos de um título.
+
+.Requisição
+include::{snippets}/filme/curl-request.adoc[]
+
+.Parâmetros de caminho
+include::{snippets}/filme/path-parameters.adoc[]
+
+.Parâmetros de query
+include::{snippets}/filme/query-parameters.adoc[]
+
+.Campos da resposta
+include::{snippets}/filme/response-fields.adoc[]
+
+.Exemplo de resposta
+include::{snippets}/filme/http-response.adoc[]
+
+== Pessoa
+
+`GET /api/imdb/pessoa/{nm}` — retorna os dados de uma pessoa (elenco/equipe).
+
+.Requisição
+include::{snippets}/pessoa/curl-request.adoc[]
+
+.Parâmetros de caminho
+include::{snippets}/pessoa/path-parameters.adoc[]
+
+.Parâmetros de query
+include::{snippets}/pessoa/query-parameters.adoc[]
+
+.Campos da resposta
+include::{snippets}/pessoa/response-fields.adoc[]
+
+.Exemplo de resposta
+include::{snippets}/pessoa/http-response.adoc[]
+
+== Estreias
+
+`GET /api/imdb/estreias` — retorna o calendário de estreias. Não usa cache
+(sensível ao tempo). Para os dados completos de cada item, consulte
+`GET /api/imdb/{codigo}`.
+
+.Requisição
+include::{snippets}/estreias/curl-request.adoc[]
+
+.Parâmetros de query
+include::{snippets}/estreias/query-parameters.adoc[]
+
+.Campos da resposta
+include::{snippets}/estreias/response-fields.adoc[]
+
+.Exemplo de resposta
+include::{snippets}/estreias/http-response.adoc[]

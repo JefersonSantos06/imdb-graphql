@@ -1,0 +1,35 @@
+{
+  "titleText": { "text": "Um Sonho de Liberdade" },
+  "originalTitleText": { "text": "The Shawshank Redemption" },
+  "plot": { "plotText": { "plainText": "Um banqueiro condenado injustamente forma uma amizade ao longo dos anos." } },
+  "releaseYear": { "year": 1994 },
+  "releaseDate": { "day": 14, "month": 10, "year": 1994 },
+  "runtime": { "seconds": 8520 },
+  "primaryImage": { "url": "https://m.media-amazon.com/images/M/shawshank.jpg" },
+  "genres": { "genres": [ { "id": "Drama", "text": "Drama" } ] },
+  "bilheteriaUS": { "total": { "amount": 28767189, "currency": "USD" } },
+  "bilheteriaMundo": { "total": { "amount": 29422415, "currency": "USD" } },
+  "diretores": {
+    "edges": [
+      { "node": { "name": { "id": "nm0001104", "nameText": { "text": "Frank Darabont" } } } }
+    ]
+  },
+  "escritores": {
+    "edges": [
+      { "node": { "name": { "id": "nm0000175", "nameText": { "text": "Stephen King" } } } },
+      { "node": { "name": { "id": "nm0001104", "nameText": { "text": "Frank Darabont" } } } }
+    ]
+  },
+  "produtores": {
+    "edges": [
+      { "node": { "name": { "id": "nm0322648", "nameText": { "text": "Liz Glotzer" } } } },
+      { "node": { "name": { "id": "nm0504496", "nameText": { "text": "David Lester" } } } }
+    ]
+  },
+  "elenco": {
+    "edges": [
+      { "node": { "name": { "id": "nm0000209", "nameText": { "text": "Tim Robbins" } }, "characters": [ { "name": "Andy Dufresne" } ] } },
+      { "node": { "name": { "id": "nm0000151", "nameText": { "text": "Morgan Freeman" } }, "characters": [ { "name": "Ellis Boyd 'Red' Redding" } ] } }
+    ]
+  }
+}

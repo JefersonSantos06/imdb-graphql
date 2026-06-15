@@ -1,0 +1,31 @@
+{
+  "edges": [
+    {
+      "node": {
+        "id": "tt39674832",
+        "titleText": { "text": "Diamond Made Man" },
+        "titleType": { "text": "Movie" },
+        "releaseYear": { "year": 2026 },
+        "releaseDate": { "day": 16, "month": 6, "year": 2026 },
+        "primaryImage": { "url": "https://m.media-amazon.com/images/M/diamond.jpg" },
+        "genres": { "genres": [ { "text": "Action" }, { "text": "Sci-Fi" } ] },
+        "principalCredits": [
+          { "credits": [ { "name": { "id": "nm10000001", "nameText": { "text": "Sreehari" } } } ] },
+          { "credits": [ { "name": { "id": "nm10000002", "nameText": { "text": "Vasudha" } } } ] }
+        ]
+      }
+    },
+    {
+      "node": {
+        "id": "tt40000000",
+        "titleText": { "text": "Outro Filme" },
+        "titleType": { "text": "Movie" },
+        "releaseYear": { "year": 2026 },
+        "releaseDate": { "day": 20, "month": 6, "year": 2026 },
+        "primaryImage": { "url": "https://m.media-amazon.com/images/M/outro.jpg" },
+        "genres": { "genres": [ { "text": "Drama" } ] },
+        "principalCredits": []
+      }
+    }
+  ]
+}
